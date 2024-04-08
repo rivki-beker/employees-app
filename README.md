@@ -8,7 +8,7 @@ The `Backend` directory contains the backend API project developed using ASP.NET
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/rivki-beker/employees-app.git
    ```
 
 2. **Navigate to the API Directory:**
