@@ -2,8 +2,6 @@
 
 This repository contains both the backend API and the frontend application for an Employee Management System.
 
----
-
 ## Backend API (ASP.NET)
 
 The `Backend` directory contains the backend API project developed using ASP.NET. To run the API, follow these steps:
@@ -21,8 +19,6 @@ The `Backend` directory contains the backend API project developed using ASP.NET
 3. **Run the API:**
    - Open the solution in Visual Studio.
    - Build and run the project (F5).
-
----
 
 ## Frontend Application (React + Vite)
 
@@ -46,8 +42,6 @@ The `Frontend` directory contains the frontend project developed using React wit
 4. **Access the Application:**
    - Open a web browser and navigate to [http://localhost:5173](http://localhost:5173).
 
----
-
 ## Technologies Used
 
 ### Backend (ASP.NET)
@@ -65,8 +59,6 @@ The `Frontend` directory contains the frontend project developed using React wit
 - Axios
 - React Hook Form
 
----
-
 ## Features
 
 - **Authentication:**
@@ -78,14 +70,10 @@ The `Frontend` directory contains the frontend project developed using React wit
 - **Role Management:**
   - View and add role names.
 
----
-
 ## Directory Structure
 
 - `Backend/`: Contains the backend API project.
 - `Frontend/`: Contains the frontend application project.
-
----
 
 ## Usage
 
