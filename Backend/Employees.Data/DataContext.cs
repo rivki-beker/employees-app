@@ -1,10 +1,5 @@
 ﻿using Employees.Core.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Employees.Data
 {
@@ -16,7 +11,8 @@ namespace Employees.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=emp_db");
+            string connectionString = "Server=bvxrqklv4vzmj0h7sn6n-mysql.services.clever-cloud.com;Port=3306;Database=bvxrqklv4vzmj0h7sn6n;Uid=uvybcmvlyprmzaa1;Pwd=n2wKwkejUWl61fQ6z6km;";
+            optionsBuilder.UseMySQL(connectionString);
         }
     }
 }
