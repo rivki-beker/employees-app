@@ -37,7 +37,7 @@ namespace Employees.API.Controllers
                     issuer: _configuration.GetValue<string>("JWT:Issuer"),
                     audience: _configuration.GetValue<string>("JWT:Audience"),
                     claims: claims,
-                    expires: DateTime.Now.AddMinutes(6),
+                    expires: DateTime.Now.AddMonths(6),
                     signingCredentials: signinCredentials
                 );
                 var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);

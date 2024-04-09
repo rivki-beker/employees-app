@@ -33,7 +33,6 @@ class RoleNamesData {
   }
 
   async addRole(role) {
-    this.setAuthorized();
     try {
       const response = await axios.post(this.baseUrl, role);
       runInAction(() => {

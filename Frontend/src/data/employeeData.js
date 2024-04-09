@@ -33,7 +33,6 @@ class EmployeeData {
   }
 
   async addEmployee(employee) {
-    this.setAuthorized();
     try {
       const response = await axios.post(this.baseUrl, employee);
       runInAction(() => {
@@ -45,7 +44,6 @@ class EmployeeData {
   }
 
   async updateEmployee(id, employee) {
-    this.setAuthorized();
     try {
       const response = await axios.put(`${this.baseUrl}/${id}`, employee);
       runInAction(() => {
@@ -60,7 +58,6 @@ class EmployeeData {
   }
 
   async deleteEmployee(employee) {
-    this.setAuthorized();
     try {
       employee.isActive = false;
       await this.updateEmployee(employee.id, employee);
