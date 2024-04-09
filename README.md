@@ -11,11 +11,13 @@ The Employee Management Application is hosted online and can be accessed through
 The `Backend` directory contains the backend API project developed using ASP.NET. To run the API locally, follow these steps:
 
 1. **Clone the Repository:**
+
    ```bash
    git clone https://github.com/rivki-beker/employees-app.git
    ```
 
 2. **Navigate to the API Directory:**
+
    ```bash
    cd Backend
    ```
@@ -23,22 +25,26 @@ The `Backend` directory contains the backend API project developed using ASP.NET
 3. **Run the API:**
    - Open the solution in Visual Studio.
    - Build and run the project (F5).
+   - Before running the API, ensure to perform database migrations. Open Package Manager Console and run the command `update-database`.
 
 ## Frontend Application (React + Vite)
 
 The `Frontend` directory contains the frontend project developed using React with Vite. To run the frontend application locally, follow these steps:
 
 1. **Navigate to the Frontend Directory:**
+
    ```bash
    cd Frontend
    ```
 
 2. **Install Dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Run the Development Server:**
+
    ```bash
    npm run dev
    ```
@@ -66,9 +72,11 @@ The `Frontend` directory contains the frontend project developed using React wit
 ## Features
 
 - **Authentication:**
+
   - Login functionality to access the application.
 
 - **Employee Management:**
+
   - View, add, update, and delete employee records.
 
 - **Role Management:**
@@ -88,6 +96,7 @@ The `Frontend` directory contains the frontend project developed using React wit
 ### Run Backend API
 
 1. **Navigate to `Backend/` directory and run the ASP.NET project.**
+2. **Before running the API, ensure to perform database migrations. Open Package Manager Console and run the command `update-database`.**
 
 ### Run Frontend Application
 

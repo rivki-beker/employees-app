@@ -1,8 +1,6 @@
 ﻿using Employees.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.IO;
 
 namespace Employees.Data
 {
@@ -24,7 +22,8 @@ namespace Employees.Data
                     throw new InvalidOperationException("Database connection string is missing.");
                 }
 
-                optionsBuilder.UseMySQL(connectionString);
+                //optionsBuilder.UseMySQL(connectionString);
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 
