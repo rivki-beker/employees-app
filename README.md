@@ -22,7 +22,14 @@ The `Backend` directory contains the backend API project developed using ASP.NET
    cd Backend
    ```
 
-3. **Run the API:**
+3. **Update the database connection string:**
+
+   - Open the `appsettings.json` file.
+   - Locate the `"MyDatabaseConnection"` key under `"ConnectionStrings"`.
+   - Update the `"Server"`, `"Database"`, `"Username"`, and `"Password"` fields with your MySQL server details.
+   - Save the `appsettings.json` file.
+
+4. **Run the API:**
    - Open the solution in Visual Studio.
    - Open Package Manager Console and run the command `update-database`.
    - Build and run the project (F5).
@@ -96,8 +103,9 @@ The `Frontend` directory contains the frontend project developed using React wit
 ### Run Backend API
 
 1. **Navigate to `Backend/` directory.**
-2. **Open Package Manager Console and run the command `update-database`.**
-3. **Run the ASP.NET project.**
+2. **Locate the `"MyDatabaseConnection"` in the `appsettings.json` file and update the fields with your MySQL server details.**
+3. **Open Package Manager Console and run the command `update-database`.**
+4. **Run the ASP.NET project.**
 
 ### Run Frontend Application
 

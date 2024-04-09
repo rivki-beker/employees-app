@@ -6,6 +6,7 @@ using Employees.Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Data;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -17,6 +18,7 @@ namespace Employees.API.Controllers
     {
         private readonly IEmployeeService _employeeService;
         private readonly IMapper _mapper;
+
         public EmployeeController(IEmployeeService employeeService, IMapper mapper)
         {
             _employeeService = employeeService;
@@ -28,7 +30,7 @@ namespace Employees.API.Controllers
         public async Task<ActionResult> Get()
         {
             var employees = _employeeService.GetAllAsync().Result;
-            return Ok(employees);
+            return Ok(_mapper.Map<IEnumerable<EmployeeDto>>(employees));
         }
 
         // GET api/<EmployeeController>/5
@@ -38,7 +40,7 @@ namespace Employees.API.Controllers
             Employee e = _employeeService.GetByIdAsync(id).Result;
             if (e == null)
                 return NotFound("This employee doesn't exist");
-            return Ok(e);
+            return Ok(_mapper.Map<EmployeeDto>(e));
         }
 
         // POST api/<EmployeeController>
@@ -51,7 +53,7 @@ namespace Employees.API.Controllers
             if (result != "Ok")
                 return BadRequest(result);
             await _employeeService.AddAsync(e);
-            return Ok(e);
+            return Ok(_mapper.Map<EmployeeDto>(e));
         }
 
         // PUT api/<EmployeeController>/5
@@ -68,7 +70,7 @@ namespace Employees.API.Controllers
             if (result != "Ok")
                 return BadRequest(result);
             await _employeeService.UpdateAsync(id, e);
-            return Ok(e);
+            return Ok(_mapper.Map<EmployeeDto>(e));
         }
 
         // DELETE api/<EmployeeController>/5

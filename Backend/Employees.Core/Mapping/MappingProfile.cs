@@ -14,6 +14,7 @@ namespace Employees.Core.Mapping
         public MappingProfile()
         {
             CreateMap<RoleDto, Role>().ReverseMap();
+            CreateMap<EmployeeDto, Employee>().ReverseMap();
         }
 
     }

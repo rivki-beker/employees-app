@@ -22,8 +22,7 @@ namespace Employees.Data
                     throw new InvalidOperationException("Database connection string is missing.");
                 }
 
-                //optionsBuilder.UseMySQL(connectionString);
-                optionsBuilder.UseSqlServer(connectionString);
+                optionsBuilder.UseMySQL(connectionString);
             }
         }
 

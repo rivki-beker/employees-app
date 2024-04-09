@@ -5,6 +5,7 @@ using Employees.Core.Entities;
 using Employees.Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -38,7 +39,7 @@ namespace Employees.API.Controllers
             Role r = _roleService.GetByIdAsync(id).Result;
             if (r == null)
                 return NotFound("This role doesn't exist");
-            return Ok(r);
+            return Ok(_mapper.Map<RoleDto>(r));
         }
 
         // POST api/<RoleController>
@@ -48,7 +49,7 @@ namespace Employees.API.Controllers
         {
             Role r = _mapper.Map<Role>(role);
             await _roleService.AddAsync(r);
-            return Ok(_mapper.Map<RoleDto>(role));
+            return Ok(_mapper.Map<RoleDto>(r));
         }
 
         // PUT api/<RoleController>/5
