@@ -24,8 +24,8 @@ The `Backend` directory contains the backend API project developed using ASP.NET
 
 3. **Run the API:**
    - Open the solution in Visual Studio.
+   - Open Package Manager Console and run the command `update-database`.
    - Build and run the project (F5).
-   - Before running the API, ensure to perform database migrations. Open Package Manager Console and run the command `update-database`.
 
 ## Frontend Application (React + Vite)
 
@@ -95,8 +95,9 @@ The `Frontend` directory contains the frontend project developed using React wit
 
 ### Run Backend API
 
-1. **Navigate to `Backend/` directory and run the ASP.NET project.**
-2. **Before running the API, ensure to perform database migrations. Open Package Manager Console and run the command `update-database`.**
+1. **Navigate to `Backend/` directory.**
+2. **Open Package Manager Console and run the command `update-database`.**
+3. **Run the ASP.NET project.**
 
 ### Run Frontend Application
 
