@@ -4,7 +4,7 @@ import axios from "axios";
 class RoleNamesData {
   roles = [];
 
-  baseUrl = "https://localhost:7177/api/RoleName";
+  baseUrl = `${import.meta.env.VITE_API_URL}/RoleName`;
 
   constructor() {
     makeObservable(this, {

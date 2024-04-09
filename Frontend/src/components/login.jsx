@@ -39,7 +39,7 @@ export default function Login() {
   async function tryLogin(formData) {
     try {
       const response = await axios.post(
-        "https://localhost:7177/api/Auth",
+        `${import.meta.env.VITE_API_URL}/Auth`,
         formData
       );
       runInAction(() => {

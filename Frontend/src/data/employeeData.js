@@ -3,7 +3,7 @@ import axios from "axios";
 
 class EmployeeData {
   employees = [];
-  baseUrl = "https://localhost:7177/api/Employee";
+  baseUrl = `${import.meta.env.VITE_API_URL}/Employee`;
 
   constructor() {
     makeObservable(this, {
