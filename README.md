@@ -2,9 +2,13 @@
 
 This repository contains both the backend API and the frontend application for an Employee Management System.
 
+## Access the Application Online
+
+The Employee Management Application is hosted online and can be accessed through the following link: [View Application](https://employees-app-kkdt.onrender.com/)
+
 ## Backend API (ASP.NET)
 
-The `Backend` directory contains the backend API project developed using ASP.NET. To run the API, follow these steps:
+The `Backend` directory contains the backend API project developed using ASP.NET. To run the API locally, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
@@ -22,7 +26,7 @@ The `Backend` directory contains the backend API project developed using ASP.NET
 
 ## Frontend Application (React + Vite)
 
-The `Frontend` directory contains the frontend project developed using React with Vite. To run the frontend application, follow these steps:
+The `Frontend` directory contains the frontend project developed using React with Vite. To run the frontend application locally, follow these steps:
 
 1. **Navigate to the Frontend Directory:**
    ```bash
