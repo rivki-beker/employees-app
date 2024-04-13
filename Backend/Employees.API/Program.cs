@@ -103,6 +103,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGet("/", ()=>"Employees API is running!");
-
 app.Run();
