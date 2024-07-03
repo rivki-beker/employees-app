@@ -1,4 +1,4 @@
-# See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
@@ -22,8 +22,4 @@ RUN dotnet publish "Employees.API.csproj" -c Release -o /app/publish /p:UseAppHo
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-
-# Set environment variable for production
-ENV MyDatabaseConnection "Server=bvxrqklv4vzmj0h7sn6n-mysql.services.clever-cloud.com;Port=3306;Database=bvxrqklv4vzmj0h7sn6n;Uid=uvybcmvlyprmzaa1;Pwd=n2wKwkejUWl61fQ6z6km;"
-
 ENTRYPOINT ["dotnet", "Employees.API.dll"]
