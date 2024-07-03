@@ -10,12 +10,18 @@ namespace Employees.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                IConfigurationRoot configuration = new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("appsettings.json")
-                    .Build();
+                // Get environment variable
+                string connectionString = Environment.GetEnvironmentVariable("MyDatabaseConnection");
 
-                string connectionString = configuration.GetConnectionString("MyDatabaseConnection");
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    IConfigurationRoot configuration = new ConfigurationBuilder()
+                        .SetBasePath(Directory.GetCurrentDirectory())
+                        .AddJsonFile("appsettings.json")
+                        .Build();
+
+                    connectionString = configuration.GetConnectionString("MyDatabaseConnection");
+                }
 
                 if (string.IsNullOrEmpty(connectionString))
                 {
